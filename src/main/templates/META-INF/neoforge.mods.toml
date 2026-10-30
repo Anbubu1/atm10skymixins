@@ -17,6 +17,10 @@ optimises egregious algorithms in atm10sky mods that tank the server tps
 config = "${mod_id}.megacells.mixins.json"
 requiredMods = ["megacells"]
 
+[[mixins]]
+config = "optimise10sky.jei.mixins.json"
+requiredMods = ["titanium", "jei"]
+
 [[dependencies.${mod_id}]]
     modId = "neoforge"
     type = "required"
