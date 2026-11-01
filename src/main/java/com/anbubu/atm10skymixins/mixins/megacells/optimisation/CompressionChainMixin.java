@@ -1,5 +1,4 @@
-
-package com.optimise10sky.optimise10sky.mixins.megacells;
+package com.anbubu.atm10skymixins.mixins.megacells.optimisation;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -26,13 +25,13 @@ import gripe._90.megacells.misc.CompressionChain;
 public abstract class CompressionChainMixin {
 
     @Unique
-    private Set<AEItemKey> optimise10sky$variantKeys;
+    private Set<AEItemKey> atm10skymixins$variantKeys;
 
     @Unique
-    private Map<AEItemKey, BigInteger> optimise10sky$factors;
+    private Map<AEItemKey, BigInteger> atm10skymixins$factors;
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void optimise10sky$init(
+    private void atm10skymixins$init(
         List<ItemStack> variants,
         CallbackInfo ci
     ) {
@@ -51,8 +50,8 @@ public abstract class CompressionChainMixin {
             }
         }
 
-        this.optimise10sky$variantKeys = keys;
-        this.optimise10sky$factors = factors;
+        this.atm10skymixins$variantKeys = keys;
+        this.atm10skymixins$factors = factors;
     }
 
     @Inject(
@@ -60,11 +59,11 @@ public abstract class CompressionChainMixin {
         at = @At("HEAD"),
         cancellable = true
     )
-    private void optimise10sky$containsVariant(
+    private void atm10skymixins$containsVariant(
         AEItemKey item,
         CallbackInfoReturnable<Boolean> cir
     ) {
-        cir.setReturnValue(this.optimise10sky$variantKeys.contains(item));
+        cir.setReturnValue(this.atm10skymixins$variantKeys.contains(item));
     }
 
     @Inject(
@@ -72,14 +71,14 @@ public abstract class CompressionChainMixin {
         at = @At("HEAD"),
         cancellable = true
     )
-    private void optimise10sky$unitFactor(
+    private void atm10skymixins$unitFactor(
         AEItemKey item,
         CallbackInfoReturnable<BigInteger> cir
     ) {
         cir.setReturnValue(
             item == null
                 ? BigInteger.ONE
-                : this.optimise10sky$factors.getOrDefault(item, BigInteger.ONE)
+                : this.atm10skymixins$factors.getOrDefault(item, BigInteger.ONE)
         );
     }
 }

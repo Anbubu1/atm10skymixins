@@ -10,16 +10,20 @@ displayName = "${mod_name}"
 authors = "anbubu"
 
 description='''
-optimises egregious algorithms in atm10sky mods that tank the server tps
+provides qol mixins for atm10sky
 '''
 
 [[mixins]]
-config = "${mod_id}.megacells.mixins.json"
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.megacells.optimisation.json"
 requiredMods = ["megacells"]
 
 [[mixins]]
-config = "optimise10sky.jei.mixins.json"
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.titanium.optimisation.json"
 requiredMods = ["titanium", "jei"]
+
+[[mixins]]
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.ae2.smithingFix.json"
+requiredMods = ["ae2"]
 
 [[dependencies.${mod_id}]]
     modId = "neoforge"

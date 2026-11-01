@@ -87,21 +87,24 @@ configurations {
 }
 
 dependencies {
-    compileOnly("org.appliedenergistics:appliedenergistics2:19.2.15:api")
+    compileOnly("org.appliedenergistics:appliedenergistics2:19.2.15")
 
     compileOnly("curse.maven:mega-cells-622112:7952621")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [
-            minecraft_version      : minecraft_version,
-            minecraft_version_range: minecraft_version_range,
-            neo_version            : neo_version,
-            loader_version_range   : loader_version_range,
-            mod_id                 : mod_id,
-            mod_name               : mod_name,
-            mod_license            : mod_license,
-            mod_version            : mod_version,
+        minecraft_version       : minecraft_version,
+        minecraft_version_range : minecraft_version_range,
+        neo_version             : neo_version,
+        loader_version_range    : loader_version_range,
+        mod_id                  : mod_id,
+        mod_name                : mod_name,
+        mod_license             : mod_license,
+        mod_version             : mod_version,
+        mod_root                : mod_root,
+        mod_parent              : mod_parent,
+        mod_group_id            : mod_group_id
     ]
     inputs.properties replaceProperties
     expand replaceProperties

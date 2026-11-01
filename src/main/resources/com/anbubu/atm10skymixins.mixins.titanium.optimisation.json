@@ -1,0 +1,11 @@
+{
+    "required": true,
+    "package": "com.anbubu.atm10skymixins.mixins.titanium.optimisation",
+    "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
+    "client": [
+        "TitaniumJeiExclusionAreasMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

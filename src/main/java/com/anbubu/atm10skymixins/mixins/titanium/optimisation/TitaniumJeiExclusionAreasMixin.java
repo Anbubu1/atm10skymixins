@@ -1,4 +1,4 @@
-package com.optimise10sky.optimise10sky.mixins.jei;
+package com.anbubu.atm10skymixins.mixins.titanium.optimisation;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public abstract class TitaniumJeiExclusionAreasMixin {
         cancellable = true,
         remap = false
     )
-    private void optimise10sky$skipExclusionAreas(
+    private void atm10skymixins$skipExclusionAreas(
         CallbackInfoReturnable<List<?>> cir
     ) {
         cir.setReturnValue(List.of());
