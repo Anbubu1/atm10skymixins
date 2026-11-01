@@ -26,6 +26,16 @@ repositories {
         name = "CurseMaven"
         url = uri("https://cursemaven.com")
     }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter { includeGroup "maven.modrinth" }
+    }
 }
 
 java {
@@ -88,8 +98,9 @@ configurations {
 
 dependencies {
     compileOnly("org.appliedenergistics:appliedenergistics2:19.2.15")
-
     compileOnly("curse.maven:mega-cells-622112:7952621")
+    compileOnly("maven.modrinth:mcjtylib:1.21-9.0.22")
+    compileOnly("maven.modrinth:7n3HbHSE:xOoMr4zS")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

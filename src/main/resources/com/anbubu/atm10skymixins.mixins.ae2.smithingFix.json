@@ -4,7 +4,6 @@
     "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
     "mixins": [
         "AESmithingTablePatternMixin",
-        "PatternEncodingTermMenuMixin",
         "KeyCounterFuzzyFallbackMixin"
     ],
     "injectors": {

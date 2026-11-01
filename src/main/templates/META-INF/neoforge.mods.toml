@@ -25,6 +25,10 @@ requiredMods = ["titanium", "jei"]
 config = "${mod_root}/${mod_parent}/${mod_id}.mixins.ae2.smithingFix.json"
 requiredMods = ["ae2"]
 
+[[mixins]]
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.rftoolsutility.environmentalFix.json"
+requiredMods = ["rftoolsutility"]
+
 [[dependencies.${mod_id}]]
     modId = "neoforge"
     type = "required"
@@ -37,11 +41,4 @@ requiredMods = ["ae2"]
     type = "required"
     versionRange = "${minecraft_version_range}"
     ordering = "NONE"
-    side = "BOTH"
-
-[[dependencies.${mod_id}]]
-    modId = "megacells"
-    type = "required"
-    versionRange = "[4.11.0,4.11.1)"
-    ordering = "AFTER"
     side = "BOTH"

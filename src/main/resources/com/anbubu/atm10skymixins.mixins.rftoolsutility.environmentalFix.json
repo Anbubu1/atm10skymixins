@@ -1,0 +1,11 @@
+{
+    "required": true,
+    "package": "com.anbubu.atm10skymixins.mixins.rftoolsutility.environmentalFix",
+    "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
+    "mixins": [
+        "EnvironmentalControllerPlayersMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

@@ -9,6 +9,7 @@ public class Atm10SkyMixinsConfig {
     public static final ModConfigSpec.BooleanValue AE2_SMITHING_FIX;
     public static final ModConfigSpec.BooleanValue MEGACELLS_OPTIMISATION;
     public static final ModConfigSpec.BooleanValue TITANIUM_OPTIMISATION;
+    public static final ModConfigSpec.BooleanValue RFTU_ENVIRONMENT_FIX;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -29,6 +30,11 @@ public class Atm10SkyMixinsConfig {
                 .comment("Prevents unnecessary JEI search and bookmark list recalculations caused by Titanium's UI exclusion area updates. Requires a client restart.")
                 .gameRestart()
                 .define("titaniumOptimisation", true);
+
+        RFTU_ENVIRONMENT_FIX = builder
+                .comment("[WIP] Fixes the Environment Controller from RFToolsUtility. Requires a client restart.")
+                .gameRestart()
+                .define("rftoolsutilityEnvironmentFix", false);
 
         builder.pop();
 
