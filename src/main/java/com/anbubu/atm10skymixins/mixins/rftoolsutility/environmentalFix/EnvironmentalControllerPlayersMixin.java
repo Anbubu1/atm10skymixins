@@ -17,18 +17,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(value = EnvironmentalControllerTileEntity.class, remap = false)
 public abstract class EnvironmentalControllerPlayersMixin {
 
-    @Shadow
-    public abstract java.util.List<?> getEnvironmentModules();
-
     @Inject(method = "addPlayer", at = @At("HEAD"), cancellable = true, remap = false)
     private void atm10skymixins$addPlayer(String player, CallbackInfo ci) {
         final BlockEntity self = (BlockEntity) (Object) this;
         final EnvironmentalData data = self.getData(EnvironmentalModule.ENVIRONMENTAL_DATA);
-        if (!data.players().contains(player)) {
-            final Set<String> next = new HashSet<>(data.players());
-            next.add(player);
+
+        Set<String> next = new HashSet<>(data.players());
+
+        if (next.add(player))
             self.setData(EnvironmentalModule.ENVIRONMENTAL_DATA, data.withPlayers(Set.copyOf(next)));
-        }
+
         ci.cancel();
     }
 
@@ -36,16 +34,12 @@ public abstract class EnvironmentalControllerPlayersMixin {
     private void atm10skymixins$delPlayer(String player, CallbackInfo ci) {
         final BlockEntity self = (BlockEntity) (Object) this;
         final EnvironmentalData data = self.getData(EnvironmentalModule.ENVIRONMENTAL_DATA);
-        if (data.players().contains(player)) {
-            final Set<String> next = new HashSet<>(data.players());
-            next.remove(player);
-            self.setData(EnvironmentalModule.ENVIRONMENTAL_DATA, data.withPlayers(Set.copyOf(next)));
-        }
-        ci.cancel();
-    }
 
-    @Inject(method = "deactivate", at = @At("HEAD"), remap = false)
-    private void atm10skymixins$initModules(CallbackInfo ci) {
-        getEnvironmentModules();
+        Set<String> next = new HashSet<>(data.players());
+
+        if (next.remove(player))
+            self.setData(EnvironmentalModule.ENVIRONMENTAL_DATA, data.withPlayers(Set.copyOf(next)));
+
+        ci.cancel();
     }
 }
