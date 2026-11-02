@@ -3,7 +3,8 @@
     "package": "com.anbubu.atm10skymixins.mixins.ae2.smithingFix",
     "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
     "mixins": [
-        "AESmithingTablePatternMixin"
+        "AESmithingTablePatternMixin",
+        "KeyCounterFuzzyFallbackMixin"
     ],
     "injectors": {
         "defaultRequire": 1
