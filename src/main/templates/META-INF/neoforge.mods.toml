@@ -37,6 +37,11 @@ requiredMods = ["industrialforegoing"]
 config = "${mod_root}/${mod_parent}/${mod_id}.mixins.titanium.multiInventoryFix.json"
 requiredMods = ["titanium"]
 
+
+[[mixins]]
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.logisticsnetworks.recipeReceivingSides.json"
+requiredMods = ["logisticsnetworks"]
+
 [[dependencies.${mod_id}]]
     modId = "neoforge"
     type = "required"

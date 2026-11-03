@@ -1,0 +1,22 @@
+{
+    "required": true,
+    "package": "com.anbubu.atm10skymixins.mixins.logisticsnetworks.recipeReceivingSides",
+    "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
+    "mixins": [
+        "RecipeIngredientMixin",
+        "RecipeChannelMixin",
+        "RecipeSetsMixin",
+        "ItemLaneMixin",
+        "FluidLaneMixin",
+        "ChemicalLaneMixin",
+        "RecipeCardMenuMixin"
+    ],
+    "client": [
+        "LnetRecipeTextMixin",
+        "RecipeCardCellsMixin",
+        "RecipeCardScreenMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
