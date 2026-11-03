@@ -1,0 +1,11 @@
+{
+    "required": true,
+    "package": "com.anbubu.atm10skymixins.mixins.titanium.multiInventoryFix",
+    "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
+    "mixins": [
+        "TitaniumMultiInvSetStackInSlotMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

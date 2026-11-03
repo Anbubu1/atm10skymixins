@@ -10,6 +10,8 @@ public class Atm10SkyMixinsConfig {
     public static final ModConfigSpec.BooleanValue MEGACELLS_OPTIMISATION;
     public static final ModConfigSpec.BooleanValue TITANIUM_OPTIMISATION;
     public static final ModConfigSpec.BooleanValue RFTU_ENVIRONMENT_FIX;
+    public static final ModConfigSpec.BooleanValue IF_SETTINGS_COPIER_FIX;
+    public static final ModConfigSpec.BooleanValue TITANIUM_MULTI_INVENTORY_FIX;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -32,9 +34,19 @@ public class Atm10SkyMixinsConfig {
                 .define("titaniumOptimisation", true);
 
         RFTU_ENVIRONMENT_FIX = builder
-                .comment("[WIP] Fixes the Environment Controller from RFToolsUtility. Requires a client restart.")
+                .comment("Fixes the Environment Controller from RFToolsUtility. Requires a client restart.")
                 .gameRestart()
-                .define("rftoolsutilityEnvironmentFix", false);
+                .define("rftoolsutilityEnvironmentalFix", false);
+
+        IF_SETTINGS_COPIER_FIX = builder
+                .comment("Fixes Industrial Foregoing's Machine Settings Copier not applying side modes to the machine's item/fluid capabilities. Requires a client restart.")
+                .gameRestart()
+                .define("industrialforegoingSettingsCopierFix", true);
+
+        TITANIUM_MULTI_INVENTORY_FIX = builder
+                .comment("Fixes Titanium's composite inventory handler backing inventory issue. Requires a restart.")
+                .gameRestart()
+                .define("titaniumMultiInventoryFix", true);
 
         builder.pop();
 

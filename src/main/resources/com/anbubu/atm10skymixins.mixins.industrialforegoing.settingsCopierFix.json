@@ -1,0 +1,11 @@
+{
+    "required": true,
+    "package": "com.anbubu.atm10skymixins.mixins.industrialforegoing.settingsCopierFix",
+    "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
+    "mixins": [
+        "IndustrialMachineTileSidenessMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

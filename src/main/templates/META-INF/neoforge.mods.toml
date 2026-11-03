@@ -29,6 +29,14 @@ requiredMods = ["ae2"]
 config = "${mod_root}/${mod_parent}/${mod_id}.mixins.rftoolsutility.environmentalFix.json"
 requiredMods = ["rftoolsutility"]
 
+[[mixins]]
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.industrialforegoing.settingsCopierFix.json"
+requiredMods = ["industrialforegoing"]
+
+[[mixins]]
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.titanium.multiInventoryFix.json"
+requiredMods = ["titanium"]
+
 [[dependencies.${mod_id}]]
     modId = "neoforge"
     type = "required"

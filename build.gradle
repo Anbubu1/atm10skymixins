@@ -27,6 +27,12 @@ repositories {
         url = uri("https://cursemaven.com")
     }
 
+    maven {
+        name = "BlameJared"
+        url = uri("https://maven.blamejared.com/")
+        content { includeGroup "com.hrznstudio" }
+    }
+
     exclusiveContent {
         forRepository {
             maven {
@@ -101,6 +107,7 @@ dependencies {
     compileOnly("curse.maven:mega-cells-622112:7952621")
     compileOnly("maven.modrinth:mcjtylib:1.21-9.0.22")
     compileOnly("maven.modrinth:7n3HbHSE:xOoMr4zS")
+    compileOnly("com.hrznstudio:titanium:1.21-4.0.34")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
