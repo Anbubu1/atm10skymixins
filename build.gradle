@@ -108,6 +108,7 @@ dependencies {
     compileOnly("maven.modrinth:mcjtylib:1.21-9.0.22")
     compileOnly("maven.modrinth:7n3HbHSE:xOoMr4zS")
     compileOnly("com.hrznstudio:titanium:1.21-4.0.34")
+    compileOnly(files("libs/logisticsnetworks-1.21.1-1.18.0.jar"))
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

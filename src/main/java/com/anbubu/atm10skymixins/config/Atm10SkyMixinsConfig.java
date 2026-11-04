@@ -12,7 +12,7 @@ public class Atm10SkyMixinsConfig {
     public static final ModConfigSpec.BooleanValue RFTU_ENVIRONMENT_FIX;
     public static final ModConfigSpec.BooleanValue IF_SETTINGS_COPIER_FIX;
     public static final ModConfigSpec.BooleanValue TITANIUM_MULTI_INVENTORY_FIX;
-    public static final ModConfigSpec.BooleanValue LOGISTICSNETWORKS_RECIPE_RECEIVING_SIDES;
+    public static final ModConfigSpec.BooleanValue LOGISTICSNETWORKS_OPTIMISATION;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -45,14 +45,14 @@ public class Atm10SkyMixinsConfig {
                 .define("industrialforegoingSettingsCopierFix", true);
 
         TITANIUM_MULTI_INVENTORY_FIX = builder
-                .comment("Fixes Titanium's composite inventory handler backing inventory issue. Requires a restart.")
+                .comment("Fixes Titanium's composite inventory handler backing inventory issue, solving automation errors regarding Industrial Foregoing machines. Requires a restart.")
                 .gameRestart()
                 .define("titaniumMultiInventoryFix", true);
 
-        LOGISTICSNETWORKS_RECIPE_RECEIVING_SIDES = builder
-                .comment("Adds per-ingredient receiving-side selection to LogisticsNetworks recipe cards. Requires a restart.")
+        LOGISTICSNETWORKS_OPTIMISATION = builder
+                .comment("Optimises LogisticsNetworks' TransferEngine class by early rejection. Requires a restart.")
                 .gameRestart()
-                .define("logisticsnetworksRecipeReceivingSides", false);
+                .define("logisticsnetworksOptimisation", true);
 
         builder.pop();
 

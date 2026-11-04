@@ -1,0 +1,8 @@
+{
+    "required": true,
+    "package": "com.anbubu.atm10skymixins.mixins.logisticsnetworks.optimisation",
+    "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
+    "mixins": [
+        "TransferEngineMixin"
+    ]
+}

@@ -38,7 +38,7 @@ config = "${mod_root}/${mod_parent}/${mod_id}.mixins.titanium.multiInventoryFix.
 requiredMods = ["titanium"]
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.logisticsnetworks.recipeReceivingSides.json"
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.logisticsnetworks.optimisation.json"
 requiredMods = ["logisticsnetworks"]
 
 [[dependencies.${mod_id}]]

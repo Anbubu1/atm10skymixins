@@ -1,5 +1,0 @@
-{
-  "tooltip.atm10skymixins.recipe_card.side": "Receiving side: %s",
-  "tooltip.atm10skymixins.recipe_card.side_default": "Node default",
-  "tooltip.atm10skymixins.recipe_card.side_edit_hint": "Left-click: cycle side; right-click: use node default"
-}
