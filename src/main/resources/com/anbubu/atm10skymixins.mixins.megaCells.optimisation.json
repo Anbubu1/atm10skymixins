@@ -1,8 +1,8 @@
 {
     "required": true,
-    "package": "com.anbubu.atm10skymixins.mixins.logisticsnetworks.optimisation",
+    "package": "com.anbubu.atm10skymixins.mixins.megaCells.optimisation",
     "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
     "mixins": [
-        "TransferEngineMixin"
+        "CompressionChainMixin"
     ]
 }

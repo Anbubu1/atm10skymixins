@@ -1,4 +1,4 @@
-package com.anbubu.atm10skymixins.mixins.megacells.optimisation;
+package com.anbubu.atm10skymixins.mixins.megaCells.optimisation;
 
 import java.math.BigInteger;
 import java.util.List;

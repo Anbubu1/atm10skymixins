@@ -1,4 +1,4 @@
-package com.anbubu.atm10skymixins.mixins.industrialforegoing.settingsCopierFix;
+package com.anbubu.atm10skymixins.mixins.industrialForegoing.settingsCopierFix;
 
 import java.util.Arrays;
 import java.util.List;

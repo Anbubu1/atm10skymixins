@@ -27,7 +27,7 @@ public class Atm10SkyMixinsConfig {
         MEGACELLS_OPTIMISATION = builder
                 .comment("Optimises Mega Cells, reducing server TPS lag caused from decompressing items in mega storage cells. Requires a client restart.")
                 .gameRestart()
-                .define("megacellsOptimisation", true);
+                .define("megaCellsOptimisation", true);
 
         TITANIUM_OPTIMISATION = builder
                 .comment("Prevents unnecessary JEI search and bookmark list recalculations caused by Titanium's UI exclusion area updates. Requires a client restart.")
@@ -42,7 +42,7 @@ public class Atm10SkyMixinsConfig {
         IF_SETTINGS_COPIER_FIX = builder
                 .comment("Fixes Industrial Foregoing's Machine Settings Copier not applying side modes to the machine's item/fluid capabilities. Requires a client restart.")
                 .gameRestart()
-                .define("industrialforegoingSettingsCopierFix", true);
+                .define("industrialForegoingSettingsCopierFix", true);
 
         TITANIUM_MULTI_INVENTORY_FIX = builder
                 .comment("Fixes Titanium's composite inventory handler backing inventory issue, solving automation errors regarding Industrial Foregoing machines. Requires a restart.")
@@ -52,7 +52,7 @@ public class Atm10SkyMixinsConfig {
         LOGISTICSNETWORKS_OPTIMISATION = builder
                 .comment("Optimises LogisticsNetworks' TransferEngine class by early rejection. Requires a restart.")
                 .gameRestart()
-                .define("logisticsnetworksOptimisation", true);
+                .define("logisticsNetworksOptimisation", true);
 
         builder.pop();
 

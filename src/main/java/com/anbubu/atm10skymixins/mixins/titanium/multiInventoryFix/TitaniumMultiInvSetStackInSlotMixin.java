@@ -32,10 +32,7 @@ public abstract class TitaniumMultiInvSetStackInSlotMixin {
         CallbackInfo ci
     ) {
         InventoryComponent<?> handler = getFromSlot(slot);
-
-        if (handler == null) {
-            return;
-        }
+        if (handler == null) return;
 
         handler.setStackInSlot(
             getRelativeSlot(handler, slot),

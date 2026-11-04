@@ -1,4 +1,4 @@
-package com.anbubu.atm10skymixins.mixins.logisticsnetworks.optimisation;
+package com.anbubu.atm10skymixins.mixins.logisticsNetworks.optimisation;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

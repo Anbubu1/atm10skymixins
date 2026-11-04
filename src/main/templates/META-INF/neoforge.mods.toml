@@ -14,7 +14,7 @@ provides qol mixins for atm10sky
 '''
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.megacells.optimisation.json"
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.megaCells.optimisation.json"
 requiredMods = ["megacells"]
 
 [[mixins]]
@@ -30,7 +30,7 @@ config = "${mod_root}/${mod_parent}/${mod_id}.mixins.rftoolsutility.environmenta
 requiredMods = ["rftoolsutility"]
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.industrialforegoing.settingsCopierFix.json"
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.industrialForegoing.settingsCopierFix.json"
 requiredMods = ["industrialforegoing"]
 
 [[mixins]]
@@ -38,7 +38,7 @@ config = "${mod_root}/${mod_parent}/${mod_id}.mixins.titanium.multiInventoryFix.
 requiredMods = ["titanium"]
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.logisticsnetworks.optimisation.json"
+config = "${mod_root}/${mod_parent}/${mod_id}.mixins.logisticsNetworks.optimisation.json"
 requiredMods = ["logisticsnetworks"]
 
 [[dependencies.${mod_id}]]
