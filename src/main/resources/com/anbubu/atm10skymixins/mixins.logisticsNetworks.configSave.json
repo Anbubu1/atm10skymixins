@@ -1,0 +1,11 @@
+{
+    "required": true,
+    "package": "com.anbubu.atm10skymixins.mixins.logisticsNetworks.configSave",
+    "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
+    "client": [
+        "LogisticsNetworksConfigSaveMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

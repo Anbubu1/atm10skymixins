@@ -1,0 +1,11 @@
+{
+    "required": true,
+    "package": "com.anbubu.atm10skymixins.mixins.ae2.craftingRemainderCache",
+    "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
+    "mixins": [
+        "AECraftingPatternRemainderCacheMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

@@ -3,6 +3,8 @@
     "package": "com.anbubu.atm10skymixins.mixins.logisticsNetworks.optimisation",
     "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
     "mixins": [
-        "TransferEngineMixin"
+        "TransferEngineMixin",
+        "TransferCommitterMixin",
+        "DirectItemHandlerMixin"
     ]
 }

@@ -103,7 +103,7 @@ configurations {
 }
 
 dependencies {
-    compileOnly("org.appliedenergistics:appliedenergistics2:19.2.15")
+    compileOnly("org.appliedenergistics:appliedenergistics2:19.2.17")
     compileOnly("curse.maven:mega-cells-622112:7952621")
     compileOnly("maven.modrinth:mcjtylib:1.21-9.0.22")
     compileOnly("maven.modrinth:7n3HbHSE:xOoMr4zS")

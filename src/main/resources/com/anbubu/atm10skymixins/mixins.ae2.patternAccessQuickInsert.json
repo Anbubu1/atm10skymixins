@@ -1,0 +1,11 @@
+{
+    "required": true,
+    "package": "com.anbubu.atm10skymixins.mixins.ae2.patternAccessQuickInsert",
+    "plugin": "com.anbubu.atm10skymixins.mixins.Atm10SkyMixinsPlugin",
+    "mixins": [
+        "PatternAccessTermMenuMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

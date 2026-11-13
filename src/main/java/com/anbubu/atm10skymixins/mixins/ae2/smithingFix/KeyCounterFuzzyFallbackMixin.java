@@ -41,7 +41,6 @@ public abstract class KeyCounterFuzzyFallbackMixin {
             return;
 
         Object subIndex = lists.get(key.getPrimaryKey());
-
         if (!(subIndex instanceof Iterable<?> iterable)) {
             cir.setReturnValue(List.of());
             return;

@@ -37,20 +37,16 @@ public abstract class IndustrialMachineTileSidenessMixin {
         final ActiveTile<?> self = (ActiveTile<?>) (Object) this;
 
         final MultiInventoryComponent<?> inventories = self.getMultiInventoryComponent();
-        if (inventories != null) {
-            for (InventoryComponent<?> inventory : List.copyOf(inventories.getInventoryHandlers())) {
+        if (inventories != null)
+            for (InventoryComponent<?> inventory : List.copyOf(inventories.getInventoryHandlers()))
                 if (inventory instanceof IFacingComponent facing)
                     atm10skymixins$reapply(inventories, facing);
-            }
-        }
 
         final MultiTankComponent<?> tanks = self.getMultiTankComponent();
-        if (tanks != null) {
-            for (FluidTankComponent<?> tank : List.copyOf(tanks.getTanks())) {
+        if (tanks != null)
+            for (FluidTankComponent<?> tank : List.copyOf(tanks.getTanks()))
                 if (tank instanceof IFacingComponent facing)
                     atm10skymixins$reapply(tanks, facing);
-            }
-        }
 
         self.invalidateCapabilities();
     }

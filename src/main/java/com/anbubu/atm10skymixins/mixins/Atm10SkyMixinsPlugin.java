@@ -76,7 +76,7 @@ public class Atm10SkyMixinsPlugin implements IMixinConfigPlugin {
 
     private static String toConfigKey(String mixinPackage) {
         String suffix = mixinPackage.substring(
-                mixinPackage.indexOf(".mixins.") + ".mixins.".length()
+            mixinPackage.indexOf(".mixins.") + ".mixins.".length()
         );
 
         String[] parts = suffix.split("\\.");
@@ -86,8 +86,7 @@ public class Atm10SkyMixinsPlugin implements IMixinConfigPlugin {
         for (int i = 1; i < parts.length; i++) {
             String part = parts[i];
 
-            key.append(Character.toUpperCase(part.charAt(0)))
-            .append(part.substring(1));
+            key.append(Character.toUpperCase(part.charAt(0))).append(part.substring(1));
         }
 
         return key.toString();

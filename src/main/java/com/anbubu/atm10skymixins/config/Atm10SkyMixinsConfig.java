@@ -6,18 +6,31 @@ public class Atm10SkyMixinsConfig {
 
     public static final ModConfigSpec SPEC;
 
+    public static final ModConfigSpec.BooleanValue AE2_CRAFTING_REMAINDER_CACHE;
     public static final ModConfigSpec.BooleanValue AE2_SMITHING_FIX;
+    public static final ModConfigSpec.BooleanValue AE2_PATTERN_ACCESS_QUICK_INSERT;
     public static final ModConfigSpec.BooleanValue MEGACELLS_OPTIMISATION;
     public static final ModConfigSpec.BooleanValue TITANIUM_OPTIMISATION;
     public static final ModConfigSpec.BooleanValue RFTU_ENVIRONMENT_FIX;
     public static final ModConfigSpec.BooleanValue IF_SETTINGS_COPIER_FIX;
     public static final ModConfigSpec.BooleanValue TITANIUM_MULTI_INVENTORY_FIX;
     public static final ModConfigSpec.BooleanValue LOGISTICSNETWORKS_OPTIMISATION;
+    public static final ModConfigSpec.BooleanValue LOGISTICSNETWORKS_CONFIG_SAVE;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
         builder.push("mixins");
+
+        AE2_CRAFTING_REMAINDER_CACHE = builder
+                .comment("Caches AE2 crafting-pattern recipe remainders per input item variant, avoiding repeated crafting-grid reconstruction during autocrafting. Requires a restart.")
+                .gameRestart()
+                .define("ae2CraftingRemainderCache", true);
+
+        AE2_PATTERN_ACCESS_QUICK_INSERT = builder
+                .comment("Allows Shift-click quick insert from AE2's Pattern Access Terminal to target ExtendedAE's Assembler Matrix. Also applies to AE2WTLib's wireless Pattern Access Terminal. Requires a restart.")
+                .gameRestart()
+                .define("ae2PatternAccessQuickInsert", true);
 
         AE2_SMITHING_FIX = builder
                 .comment("Fixes AE2 Smithing Patterns to support non-vanilla smithing recipes, such as Forbidden Arcanus's Eternal Stella. Requires a client restart.")
@@ -53,6 +66,11 @@ public class Atm10SkyMixinsConfig {
                 .comment("Optimises LogisticsNetworks' TransferEngine class by early rejection. Requires a restart.")
                 .gameRestart()
                 .define("logisticsNetworksOptimisation", true);
+
+        LOGISTICSNETWORKS_CONFIG_SAVE = builder
+                .comment("Persists the common/server settings changed in LogisticsNetworks' in-game config screen. Requires a restart.")
+                .gameRestart()
+                .define("logisticsNetworksConfigSave", true);
 
         builder.pop();
 

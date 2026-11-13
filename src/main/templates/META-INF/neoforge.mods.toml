@@ -14,31 +14,43 @@ provides qol mixins for atm10sky
 '''
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.megaCells.optimisation.json"
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.megaCells.optimisation.json"
 requiredMods = ["megacells"]
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.titanium.optimisation.json"
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.titanium.optimisation.json"
 requiredMods = ["titanium", "jei"]
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.ae2.smithingFix.json"
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.ae2.craftingRemainderCache.json"
 requiredMods = ["ae2"]
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.rftoolsutility.environmentalFix.json"
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.ae2.smithingFix.json"
+requiredMods = ["ae2"]
+
+[[mixins]]
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.ae2.patternAccessQuickInsert.json"
+requiredMods = ["ae2", "extendedae"]
+
+[[mixins]]
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.rftoolsutility.environmentalFix.json"
 requiredMods = ["rftoolsutility"]
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.industrialForegoing.settingsCopierFix.json"
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.industrialForegoing.settingsCopierFix.json"
 requiredMods = ["industrialforegoing"]
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.titanium.multiInventoryFix.json"
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.titanium.multiInventoryFix.json"
 requiredMods = ["titanium"]
 
 [[mixins]]
-config = "${mod_root}/${mod_parent}/${mod_id}.mixins.logisticsNetworks.optimisation.json"
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.logisticsNetworks.optimisation.json"
+requiredMods = ["logisticsnetworks"]
+
+[[mixins]]
+config = "${mod_root}/${mod_parent}/${mod_id}/mixins.logisticsNetworks.configSave.json"
 requiredMods = ["logisticsnetworks"]
 
 [[dependencies.${mod_id}]]

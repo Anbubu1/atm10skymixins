@@ -2,6 +2,9 @@ package com.anbubu.atm10skymixins.mixins.titanium.multiInventoryFix;
 
 import com.hrznstudio.titanium.component.inventory.InventoryComponent;
 import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nonnull;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -28,7 +31,7 @@ public abstract class TitaniumMultiInvSetStackInSlotMixin {
     )
     private void atm10skymixins$writeOnlyToMappedInventory(
         int slot,
-        ItemStack stack,
+        @Nonnull ItemStack stack,
         CallbackInfo ci
     ) {
         InventoryComponent<?> handler = getFromSlot(slot);

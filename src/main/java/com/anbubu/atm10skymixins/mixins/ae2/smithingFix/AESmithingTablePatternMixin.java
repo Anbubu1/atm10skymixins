@@ -46,9 +46,7 @@ public abstract class AESmithingTablePatternMixin {
         @Nonnull ResourceLocation recipeId
     ) {
         var found = manager.byKey(recipeId);
-
-        if (found.isEmpty())
-            return found;
+        if (found.isEmpty()) return found;
 
         var holder = found.get();
 
@@ -60,8 +58,7 @@ public abstract class AESmithingTablePatternMixin {
             return found;
 
         var id = holder.id();
-        if (id == null)
-            return found;
+        if (id == null) return found;
 
         return Optional.of(
             new RecipeHolder<>(
